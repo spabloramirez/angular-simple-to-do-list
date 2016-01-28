@@ -8,7 +8,7 @@
 </head>
 <body class="container" ng-app="todoApp">
 <div ng-controller="TodoListController as todoList">
-    <span>{{todoList.remaining()}} of {{todoList.todos.length}}</span>
+    <span>{{todoList.remaining()}} of {{todoList.todos.length}} [<a href="" ng-click="todoList.archive()">Archive</a>]</span>
     <ul class="list-unstyled">
         <li ng-repeat="todo in todoList.todos">
             <input type="checkbox" ng-checked="todo.done" ng-model="todo.done"/>
